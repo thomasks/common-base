@@ -8,7 +8,7 @@ public class AmountUtils {
 	
 	
 	public static String toAmount(Long banlance) {
-		BigDecimal amt = new BigDecimal(banlance);
+		BigDecimal amt = new BigDecimal(banlance).divide(new BigDecimal(1000));
 		return formatAmount(amt).toString();
 	}
 	
